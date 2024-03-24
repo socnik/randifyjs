@@ -1,9 +1,11 @@
 {
-  "include": ["./src/**/*.ts"],
+  "include": ["./src/**/*", "./vite.config.ts"],
   "compilerOptions": {
     "strict": true,
     "isolatedModules": true,
     "esModuleInterop": true,
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
     "lib": ["ES2023"],
     "types": ["node"],
     "noEmit": true
