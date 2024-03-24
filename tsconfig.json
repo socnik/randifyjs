@@ -1,6 +1,7 @@
 {
   "include": ["./src/**/*", "./vite.config.ts", "./vitest.config.ts"],
   "compilerOptions": {
+    "target": "ESNext",
     "module": "ESNext",
     "moduleResolution": "Bundler",
     "strict": true,
