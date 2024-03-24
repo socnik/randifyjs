@@ -10,4 +10,11 @@ export class Random {
   randNative(): number {
     return this.#source.getRandomValue()
   }
+
+  rand(min: number, max: number, step: number = 1): number {
+    const randomValue = this.#source.getRandomValue()
+    const range = (max - min) / step
+
+    return Math.floor(randomValue * range) * step + min
+  }
 }
