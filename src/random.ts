@@ -1,10 +1,13 @@
 import { type RandomSource } from './randomSource'
+import { RandomCore } from './randomCore'
 
 export class Random {
   #source: RandomSource
+  #core: RandomCore
 
   constructor(source: RandomSource) {
     this.#source = source
+    this.#core = new RandomCore()
   }
 
   randNative(): number {
@@ -12,9 +15,8 @@ export class Random {
   }
 
   rand(min: number, max: number, step: number = 1): number {
-    const randomValue = this.#source.getRandomValue()
-    const range = (max - min) / step
-
-    return Math.floor(randomValue * range) * step + min
+    return RandomCore.executeAlgorithm(this.#core.rand(min, max, step), () =>
+      this.#source.getRandomValue()
+    )
   }
 }
