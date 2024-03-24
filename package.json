@@ -2,7 +2,9 @@
   "name": "randifyjs",
   "version": "0.0.0",
   "description": "",
-  "scripts": {},
+  "scripts": {
+    "format": "prettier --write ."
+  },
   "license": "MIT",
   "keywords": [],
   "main": "",
@@ -18,5 +20,9 @@
   },
   "type": "module",
   "prettier": "@socnik/my-prettier-config",
-  "packageManager": "pnpm@8.10.5"
+  "packageManager": "pnpm@8.10.5",
+  "devDependencies": {
+    "@socnik/my-prettier-config": "^0.0.1",
+    "prettier": "^3.2.5"
+  }
 }
