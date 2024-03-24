@@ -1,0 +1,11 @@
+{
+  "include": ["./src/**/*.ts"],
+  "compilerOptions": {
+    "strict": true,
+    "isolatedModules": true,
+    "esModuleInterop": true,
+    "lib": ["ES2023"],
+    "types": ["node"],
+    "noEmit": true
+  }
+}

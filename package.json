@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
+    "check-types": "tsc",
     "format": "prettier --write ."
   },
   "license": "MIT",
@@ -23,6 +24,8 @@
   "packageManager": "pnpm@8.10.5",
   "devDependencies": {
     "@socnik/my-prettier-config": "^0.0.1",
-    "prettier": "^3.2.5"
+    "@types/node": "^20.11.30",
+    "prettier": "^3.2.5",
+    "typescript": "^5.4.3"
   }
 }
