@@ -22,4 +22,19 @@ export class RandomCore {
       randomNumber = randomNumberCallback()
     }
   }
+
+  static async executeAlgorithmAsync(
+    algorithmInstance: RandomAlgorithmGenerator,
+    randomNumberCallback: () => Promise<number>
+  ): Promise<number> {
+    let randomNumber: number = 0
+
+    while (true) {
+      const iteration = algorithmInstance.next(randomNumber)
+
+      if (iteration.done) return iteration.value
+
+      randomNumber = await randomNumberCallback()
+    }
+  }
 }
