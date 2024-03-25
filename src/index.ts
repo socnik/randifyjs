@@ -1,4 +1,4 @@
-export { Random } from '@/random'
-export { defaultRandomSource } from '@/defaultRandomSource'
+export { Random } from '@/syncApi/random'
+export { defaultRandomSource } from './syncApi/defaultRandomSource'
 export { randNative, rand } from '@/defaultInstance'
-export { type RandomSource } from '@/randomSource'
+export { type RandomSource } from './syncApi/randomSource'

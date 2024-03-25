@@ -1,5 +1,5 @@
 import { type RandomSource } from './randomSource'
-import { RandomCore } from './randomCore'
+import { RandomCore } from '../randomCore'
 
 export class Random {
   #source: RandomSource

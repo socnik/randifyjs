@@ -1,5 +1,5 @@
 import { expect, describe, test, vi } from 'vitest'
-import { defaultRandomSource } from '@/defaultRandomSource'
+import { defaultRandomSource } from '../syncApi/defaultRandomSource'
 
 const random = vi.spyOn(Math, 'random')
 
