@@ -1,11 +1,13 @@
 {
-  "extends": "./tsconfig.json",
+  "extends": "./tsconfig.base.json",
   "include": ["./src/**/*"],
+  "exclude": ["./src/**/*.test.ts"],
   "compilerOptions": {
-    "noEmit": false,
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "rootDir": "./src",
-    "outDir": "./dist"
+    "isolatedModules": false,
+    "outFile": "./dist/randifyjs.js",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    }
   }
 }
