@@ -1,4 +1,4 @@
-import { RandomSource } from './randomSource'
+import { RandomSource } from '@/randomSource'
 
 export const defaultRandomSource: RandomSource = {
   getRandomValue: () => Math.random(),

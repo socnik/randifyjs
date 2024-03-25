@@ -1,6 +1,6 @@
 import { test, describe, vi, expect } from 'vitest'
-import { Random } from '../syncApi/random'
-import { type RandomSource } from '../syncApi/randomSource'
+import { Random } from '@/syncApi/random'
+import { type RandomSource } from '@/randomSource'
 
 const mockRandomSource: RandomSource = {
   getRandomValue: () => 0,
