@@ -59,4 +59,23 @@ describe('RandomCore class', () => {
       RandomCore.executeAlgorithm(random.choices(array, 3), () => Math.random())
     )
   })
+
+  test('choices method return null for empty array', () => {
+    expect(
+      RandomCore.executeAlgorithm(random.choices([], 3), () => Math.random())
+    ).equal(null)
+  })
+
+  test('correct make random choice in array', () => {
+    const array = [0, 1, 2, 3, 4, 5]
+    expect(array).includes(
+      RandomCore.executeAlgorithm(random.choice(array), () => Math.random())
+    )
+  })
+
+  test('choice method return null for empty array', () => {
+    expect(
+      RandomCore.executeAlgorithm(random.choice([]), () => Math.random())
+    ).equal(null)
+  })
 })

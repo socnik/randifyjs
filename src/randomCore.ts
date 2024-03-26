@@ -30,7 +30,9 @@ export class RandomCore {
   *choices<T>(
     sequence: T[],
     choicesNumber: number
-  ): RandomAlgorithmGenerator<T[]> {
+  ): RandomAlgorithmGenerator<T[] | null> {
+    if (sequence.length == 0) return null
+
     const output: T[] = []
 
     for (let i = 0; i < choicesNumber; i++) {
@@ -39,6 +41,14 @@ export class RandomCore {
     }
 
     return output
+  }
+
+  *choice<T>(sequence: T[]): RandomAlgorithmGenerator<T | null> {
+    if (sequence.length === 0) return null
+
+    const randomIndex = yield* this.rand(0, sequence.length - 1, 1)
+
+    return sequence[randomIndex]
   }
 
   static executeAlgorithm<T>(
