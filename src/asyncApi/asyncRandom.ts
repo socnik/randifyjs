@@ -20,4 +20,11 @@ export class AsyncRandom {
       () => this.#source.getRandomValue()
     )
   }
+
+  async shuffle<T>(sequence: T[]): Promise<T[]> {
+    return await RandomCore.executeAlgorithmAsync(
+      this.#core.shuffle(sequence),
+      () => this.#source.getRandomValue()
+    )
+  }
 }

@@ -19,4 +19,10 @@ export class Random {
       this.#source.getRandomValue()
     )
   }
+
+  shuffle<T>(sequence: T[]): T[] {
+    return RandomCore.executeAlgorithm(this.#core.shuffle(sequence), () =>
+      this.#source.getRandomValue()
+    )
+  }
 }
