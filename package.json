@@ -3,15 +3,24 @@
   "version": "0.0.0",
   "description": "",
   "scripts": {
+    "build": "concurrently \"tsc --project tsconfig.build.json\" \"vite build\"",
+    "test": "vitest",
     "check-types": "tsc",
     "format": "prettier --write ."
   },
   "license": "MIT",
   "keywords": [],
-  "main": "",
-  "bin": [],
+  "exports": {
+    ".": {
+      "import": "./dist/randifyjs.js",
+      "require": "./dist/randifyjs.cjs",
+      "types": "./randifyjs.d.ts"
+    }
+  },
   "files": [
-    "README.md"
+    "README.md",
+    "LICENSE",
+    "dist"
   ],
   "author": {
     "name": "Nikita"
@@ -25,6 +34,7 @@
   "devDependencies": {
     "@socnik/my-prettier-config": "^0.0.1",
     "@types/node": "^20.11.30",
+    "concurrently": "^8.2.2",
     "prettier": "^3.2.5",
     "typescript": "^5.4.3",
     "vite": "^5.2.5",
