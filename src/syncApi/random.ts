@@ -32,4 +32,10 @@ export class Random {
       () => this.#source.getRandomValue()
     )
   }
+
+  choice<T>(sequence: T[]): T | null {
+    return RandomCore.executeAlgorithm(this.#core.choice(sequence), () =>
+      this.#source.getRandomValue()
+    )
+  }
 }
