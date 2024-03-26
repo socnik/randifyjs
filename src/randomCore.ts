@@ -27,6 +27,20 @@ export class RandomCore {
     return output
   }
 
+  *choices<T>(
+    sequence: T[],
+    choicesNumber: number
+  ): RandomAlgorithmGenerator<T[]> {
+    const output: T[] = []
+
+    for (let i = 0; i < choicesNumber; i++) {
+      const randomIndex = yield* this.rand(0, sequence.length - 1, 1)
+      output.push(sequence[randomIndex])
+    }
+
+    return output
+  }
+
   static executeAlgorithm<T>(
     algorithmInstance: RandomAlgorithmGenerator<T>,
     randomNumberCallback: () => number

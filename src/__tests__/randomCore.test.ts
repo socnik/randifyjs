@@ -52,4 +52,11 @@ describe('RandomCore class', () => {
       ]
     `)
   })
+
+  test('correct make random choices in array', () => {
+    const array = [0, 1, 2, 3, 4, 5]
+    expect(array).containSubset(
+      RandomCore.executeAlgorithm(random.choices(array, 3), () => Math.random())
+    )
+  })
 })
