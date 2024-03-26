@@ -2,6 +2,9 @@ type RandomAlgorithmGenerator = Generator<void, number, number>
 
 export class RandomCore {
   *rand(min: number, max: number, step: number): RandomAlgorithmGenerator {
+    if (min >= max)
+      throw new Error('Maximum number greater or equal minimal number')
+
     const randomValue = yield
     const range = (max - min) / step
 
