@@ -25,4 +25,11 @@ export class Random {
       this.#source.getRandomValue()
     )
   }
+
+  choices<T>(sequence: T[], choicesNumber: number): T[] | null {
+    return RandomCore.executeAlgorithm(
+      this.#core.choices(sequence, choicesNumber),
+      () => this.#source.getRandomValue()
+    )
+  }
 }

@@ -27,4 +27,11 @@ export class AsyncRandom {
       () => this.#source.getRandomValue()
     )
   }
+
+  async choices<T>(sequence: T[], choicesNumber: number): Promise<T[] | null> {
+    return await RandomCore.executeAlgorithmAsync(
+      this.#core.choices(sequence, choicesNumber),
+      () => this.#source.getRandomValue()
+    )
+  }
 }
