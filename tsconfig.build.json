@@ -3,8 +3,8 @@
   "include": ["./src/**/*"],
   "exclude": ["./src/**/*.test.ts", "./src/**/*.bench.ts"],
   "compilerOptions": {
-    "isolatedModules": false,
-    "outFile": "./dist/randifyjs.js",
+    "skipLibCheck": false,
+    "outDir": "./.tmp",
     "baseUrl": ".",
     "paths": {
       "@/*": ["./src/*"]

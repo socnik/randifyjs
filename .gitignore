@@ -3,3 +3,6 @@ node_modules
 
 # Vite
 dist
+
+# Dts types build
+.tmp

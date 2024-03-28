@@ -5,7 +5,7 @@
   "license": "MIT",
   "scripts": {
     "prepare": "husky",
-    "build": "concurrently \"tsc --project tsconfig.build.json\" \"vite build\"",
+    "build": "concurrently \"tsx build-dts.ts\" \"vite build\"",
     "test": "vitest",
     "bench": "vitest bench",
     "test:ui": "vitest --ui",
@@ -19,7 +19,7 @@
     ".": {
       "import": "./dist/randifyjs.js",
       "require": "./dist/randifyjs.cjs",
-      "types": "./dist/randifyjs.d.ts"
+      "types": "./dist/index.d.ts"
     }
   },
   "files": [
@@ -46,9 +46,13 @@
     "@types/node": "^20.11.30",
     "@vitest/ui": "^1.4.0",
     "concurrently": "^8.2.2",
+    "dts-bundle-generator": "^9.3.1",
+    "execa": "^8.0.1",
     "husky": "^9.0.11",
     "lint-staged": "^15.2.2",
     "prettier": "^3.2.5",
+    "tsc-alias": "^1.8.8",
+    "tsx": "^4.7.1",
     "typescript": "^5.4.3",
     "vite": "^5.2.5",
     "vitest": "^1.4.0"
