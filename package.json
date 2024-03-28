@@ -1,6 +1,6 @@
 {
   "name": "@socnik/randifyjs",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Simple ts/js library for generating random values.",
   "license": "MIT",
   "scripts": {
@@ -19,7 +19,7 @@
     ".": {
       "import": "./dist/randifyjs.js",
       "require": "./dist/randifyjs.cjs",
-      "types": "./randifyjs.d.ts"
+      "types": "./dist/randifyjs.d.ts"
     }
   },
   "files": [
