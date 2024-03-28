@@ -1,7 +1,8 @@
 {
   "name": "randifyjs",
   "version": "0.0.0",
-  "description": "",
+  "description": "Simple ts/js library for generating random values.",
+  "license": "MIT",
   "scripts": {
     "prepare": "husky",
     "build": "concurrently \"tsc --project tsconfig.build.json\" \"vite build\"",
@@ -11,8 +12,9 @@
     "check-types": "tsc",
     "format": "prettier --write ."
   },
-  "license": "MIT",
-  "keywords": [],
+  "keywords": [
+    "random"
+  ],
   "exports": {
     ".": {
       "import": "./dist/randifyjs.js",
@@ -28,6 +30,11 @@
   "author": {
     "name": "Nikita"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/socnik/randifyjs"
+  },
+  "homepage": "https://github.com/socnik/randifyjs#readme",
   "engines": {
     "node": ">=18.0.0"
   },
