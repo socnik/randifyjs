@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.base.json",
   "include": ["./src/**/*"],
-  "exclude": ["./src/**/*.test.ts"],
+  "exclude": ["./src/**/*.test.ts", "./src/**/*.bench.ts"],
   "compilerOptions": {
     "isolatedModules": false,
     "outFile": "./dist/randifyjs.js",
