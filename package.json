@@ -1,5 +1,5 @@
 {
-  "name": "randifyjs",
+  "name": "@socnik/randifyjs",
   "version": "0.0.0",
   "description": "Simple ts/js library for generating random values.",
   "license": "MIT",
