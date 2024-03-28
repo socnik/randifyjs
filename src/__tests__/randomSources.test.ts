@@ -1,10 +1,10 @@
 import { expect, describe, test, vi } from 'vitest'
-import { defaultRandomSource } from '@/syncApi/defaultRandomSource'
+import { defaultRandomSource } from '@/randomSources'
 
 const random = vi.spyOn(Math, 'random')
 
-describe('test default random source', () => {
-  test('test source generates right values', () => {
+describe('test random sources', () => {
+  test('test default random source', () => {
     random.mockReturnValue(0)
     expect(defaultRandomSource.getRandomValue()).equal(0)
 

@@ -1,7 +1,6 @@
-export { Random } from '@/syncApi/random'
-export { defaultRandomSource } from '@/syncApi/defaultRandomSource'
-export { AsyncRandom } from '@/asyncApi/asyncRandom'
-export { defaultAsyncRandomSource } from '@/asyncApi/defaultAsyncRandomSource'
+export { Random } from '@/random'
+export { defaultRandomSource } from '@/randomSources'
+export { AsyncRandom } from '@/asyncRandom'
 export { randNative, rand, shuffle, choices, choice } from '@/defaultInstance'
 export {
   defineRandomSource,

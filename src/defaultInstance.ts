@@ -1,5 +1,5 @@
-import { Random } from '@/syncApi/random'
-import { defaultRandomSource } from '@/syncApi/defaultRandomSource'
+import { Random } from '@/random'
+import { defaultRandomSource } from '@/randomSources'
 
 const random = new Random(defaultRandomSource)
 
